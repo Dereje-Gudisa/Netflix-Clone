@@ -3,17 +3,16 @@ import logo from './assets/netflix-logo.png';
 import profile from './assets/profile.png';
 import { IoSearch } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
-
 import './Nav.css'
 
 function Nav() {
 
   return (
     <>
-        <nav className='bg-black border-2 border-yellow-500 px-10 flex justify-between fixed top-0 left-0 w-full'>
+        <nav className='bg-black/70 px-10 flex justify-between fixed top-0 left-0 w-full'>
             <img className='w-30 h-auto' src={logo}alt="Netflix" />
-            <div className='text-white w-full border-2 border-blue-500 flex justify-between'>
-                <ul className='flex justify-around items-center border-2 border-red-500 w-140'>
+            <div className='text-white w-full flex justify-between'>
+                <ul className='flex justify-around items-center w-140'>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Shows</a></li>
                     <li><a href="#">Movies</a></li>
@@ -22,7 +21,7 @@ function Nav() {
                     <li><a href="#">My List</a></li>
                     <li><a href="#">Browse by Language</a></li>
                 </ul>
-                <ul className='text-white flex justify-around items-center border-2 border-green-500 w-80'>
+                <ul className='text-white flex justify-around items-center w-80'>
                     <button><IoSearch /></button>
                     <li><a href="#">Kids</a></li>
                     <li><a href="#"><IoMdNotificationsOutline /></a></li>
