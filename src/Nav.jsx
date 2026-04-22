@@ -1,15 +1,19 @@
-import React from 'react'
-import logo from './assets/netflix-logo.png'
+import React from 'react';
+import logo from './assets/netflix-logo.png';
+import profile from './assets/profile.png';
+import { IoSearch } from "react-icons/io5";
+import { IoMdNotificationsOutline } from "react-icons/io";
+
 import './Nav.css'
 
 function Nav() {
 
   return (
     <>
-        <nav className='nav'>
-            <div className='nav-left-container'>
-                <img className='netflix-home-logo' src={logo} alt="Netflix" />
-                <ul className='nav-links nav-links-left'>
+        <nav className='bg-black border-2 border-yellow-500 px-10 flex justify-between fixed top-0 left-0 w-full'>
+            <img className='w-30 h-auto' src={logo}alt="Netflix" />
+            <div className='text-white w-full border-2 border-blue-500 flex justify-between'>
+                <ul className='flex justify-around items-center border-2 border-red-500 w-140'>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Shows</a></li>
                     <li><a href="#">Movies</a></li>
@@ -18,14 +22,13 @@ function Nav() {
                     <li><a href="#">My List</a></li>
                     <li><a href="#">Browse by Language</a></li>
                 </ul>
+                <ul className='text-white flex justify-around items-center border-2 border-green-500 w-80'>
+                    <button><IoSearch /></button>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#"><IoMdNotificationsOutline /></a></li>
+                    <li><img className='w-8 h-auto' src={profile} alt="profile" /></li>
+                </ul>
             </div>
-            <ul className='nav-links nav-links-right'>
-                <button>search</button>
-                <li><a href="#">Kids</a></li>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="#">Profile</a></li>
-            </ul>
-            
       </nav>
 
     </>

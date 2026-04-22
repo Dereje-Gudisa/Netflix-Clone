@@ -1,3 +1,5 @@
+
+/*
 *{
     margin: 0;
     padding: 0;
@@ -9,13 +11,7 @@
     margin-right: 20px;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #141414;
-}
+
 
 .nav-links {
     list-style:none;
@@ -31,3 +27,4 @@
     display: flex;
     align-items: center;
 }
+*/
