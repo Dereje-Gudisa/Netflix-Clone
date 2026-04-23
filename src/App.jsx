@@ -10,10 +10,6 @@ function App() {
       <Nav />
       <HomeScreen />
       <Carousel />
-      <Carousel />
-      <Carousel />
-      <Carousel />
-      <Carousel />
     </> 
   )
 }

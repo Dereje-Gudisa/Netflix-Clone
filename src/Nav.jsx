@@ -3,7 +3,6 @@ import logo from './assets/netflix-logo.png';
 import profile from './assets/profile.png';
 import { IoSearch } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
-import './Nav.css'
 
 function Nav() {
 
