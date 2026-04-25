@@ -2,15 +2,20 @@ import React from 'react';
 import Nav from './Nav';
 import HomeScreen from './HomeScreen';
 import Carousel from './Carousel';
+import { MyProvider } from './context/MovieContext';
 
 function App() {
 
   return (
     <>
-      <Nav />
-      {/* <HomeScreen /> */}
-      <Carousel />
-    </> 
+      <MyProvider>
+        
+          <Nav />
+          <HomeScreen />
+          <Carousel />
+        
+      </MyProvider>
+    </>
   )
 }
 
