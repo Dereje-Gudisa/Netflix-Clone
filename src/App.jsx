@@ -3,6 +3,7 @@ import Nav from './Nav';
 import HomeScreen from './HomeScreen';
 import Carousel from './Carousel';
 import { MyProvider } from './context/MovieContext';
+import Footer from './Footer';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
           <Nav />
           <HomeScreen />
           <Carousel />
+          <Footer />
         
       </MyProvider>
     </>

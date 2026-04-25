@@ -1,16 +1,8 @@
 import React, { useState, useEffect, useContext, useMemo } from 'react';
-/* import movie1 from './assets/movie1.png';
-import movie2 from './assets/movie2.png';
-import movie3 from './assets/movie3.png';
-import movie4 from './assets/movie4.png';
-import movie5 from './assets/movie5.png';
-import movie6 from './assets/movie6.png';
-import movie7 from './assets/movie7.png';
-import movie8 from './assets/movie8.png'; */
+
 import { GrNext } from "react-icons/gr";
 import { GrPrevious } from "react-icons/gr";
 import { useMovies } from './context/MovieContext';
-
 
 const Carousel = () => {
 
@@ -53,7 +45,7 @@ const Carousel = () => {
 
     return (
         <>  
-            <div className='border-2 mt-45 w-full flex justify-end items-center pr-10 mb-2 '>
+            <div className='border-2 mt-5 w-full flex justify-end items-center pr-10 mb-2 '>
                 {Array.from({ length: moviePerPage }, (_, index) => (
                     <span 
                         key={index}
@@ -75,11 +67,11 @@ const Carousel = () => {
                             <img
                                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                                 alt={movie.title}/>
-                            <div className='text-white'>{movie.title}</div>
+                            {/* <div className='text-white'>{movie.title}</div> */}
                         </div>
                     ))}
 
-                    {/* movies.map((movie, index) => (
+                    {/* movies.map((movie   , index) => (
                         <div 
                             key={index}
                             className={'border-2 border-black w-1/5 h-40 mx-auto flex justify-center items-center'}

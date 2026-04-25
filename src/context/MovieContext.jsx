@@ -27,7 +27,7 @@ export const MyProvider = ({ children }) => {
     moviesData();
   }, []);
 
-  console.log(movies);
+  //console.log(movies);
   
   return (
     <MovieContext.Provider value={{

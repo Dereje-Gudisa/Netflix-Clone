@@ -14,7 +14,9 @@ function HomeScreen() {
     console.log(randomIndex);
 
     const firstMovie = movies.length > 0 ? movies[randomIndex] : null;
-    
+    const title = firstMovie ? firstMovie.title : 'Loading...';
+    const overView = firstMovie ? firstMovie.overview : 'Loading...';
+    console.log(movies);
   return (
     <>
         <div className='bg-gray-900 text-white h-200 flex bg-cover bg-center' 
@@ -25,11 +27,10 @@ function HomeScreen() {
             
             <div className='ml-10 pl-10 w-full'>
 
-                <h1 className='h-1/2 mt-30'>Title of The Movie</h1><br />
+                <h1 className='h-1/2 mt-30 border-2 w-1/5 h-1/2 flex justify-start items-center'>{title}</h1><br />
 
-                <p className='w-1/3'>descriptions of the movie Lorem ipsum dolor 
-                    sit s in ipsam error modi hic alias.
-                    Distinctio nemo, ssitatibus mollitia commodi saepe provident at eveniet omnis quos ab sed laborum. Vitae, soluta.
+                <p className='w-1/3'>
+                    {overView}
                 </p><br />
 
                 <div className='flex'>
