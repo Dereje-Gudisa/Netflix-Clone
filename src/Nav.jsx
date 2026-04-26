@@ -1,8 +1,40 @@
 import React from 'react';
 import logo from './assets/netflix-logo.png';
 import profile from './assets/profile.png';
+import profile2 from './assets/profile2.png';
+import profile3 from './assets/profile3.png';
 import { IoSearch } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
+"use client"
+
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar"
+
+import {
+  CreditCardIcon,
+  LogOutIcon,
+  SettingsIcon,
+  UserIcon,
+} from "lucide-react"
+
+import { Button } from "@/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
+import { LuCircleHelp } from "react-icons/lu";
+import { GrEdit } from "react-icons/gr";
+
+
 
 function Nav() {
 
@@ -24,7 +56,50 @@ function Nav() {
                     <button><IoSearch /></button>
                     <li><a href="#">Kids</a></li>
                     <li><a href="#"><IoMdNotificationsOutline /></a></li>
-                    <li><img className='w-8 h-auto' src={profile} alt="profile" /></li>
+                    {/* <img className='w-8 h-auto' src={profile} alt="Profile" />
+
+                    <select name="profile" id="" className='text-white bg-[#141414] p-1 border-2 rounded-sm'>
+                        
+                        <option value="profile">profile 1</option>
+                        <option value="profile1">Profile 2</option>
+                        <option value="profile2">Profile 3</option>
+                        <option value="profile3">Profile 4</option>
+
+                        <option value="profile1">Manage Profile</option>
+                        <option value="profile2">Account</option>
+                        <option value="profile3">Help Center</option>
+                        <option value="profile3">Sign out of Netflix</option>
+                    </select> */}
+
+                    <DropdownMenu>
+                        <DropdownMenuTrigger render={<Button variant="ghost" size="icon">
+                            <Avatar>
+                                
+                                <AvatarImage src={profile} className = 'rounded-sm' alt="profile one"/>
+                                <AvatarFallback>Profile</AvatarFallback>
+                            </Avatar></Button>} />
+                        <DropdownMenuContent className="w-60 text-sm bg-[#141414] text-white ">
+                            <DropdownMenuGroup>
+
+                            <DropdownMenuItem><img  src={profile2} alt="profile2" className='w-8 h-8 rounded-sm mr-2' />Dereje G</DropdownMenuItem>
+
+                            <DropdownMenuItem><img  src={profile3} alt="profile2" className='w-8 h-8 rounded-sm mr-2' />John Doe</DropdownMenuItem>
+
+                            <DropdownMenuItem><img  src={profile} alt="profile2" className='w-8 h-8 rounded-sm mr-2' />Mohammed A</DropdownMenuItem>
+
+                            <DropdownMenuItem className = 'mt-2'><GrEdit />Manage Profile</DropdownMenuItem>
+
+                            <DropdownMenuItem><UserIcon />Account</DropdownMenuItem>
+
+                            <DropdownMenuItem><LuCircleHelp />Help Center</DropdownMenuItem>
+
+                            </DropdownMenuGroup>
+                            <DropdownMenuSeparator />
+                            <DropdownMenuGroup>
+                            <DropdownMenuItem variant="destructive"><LogOutIcon />Sign out of Netflix</DropdownMenuItem>
+                            </DropdownMenuGroup>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
                 </ul>
             </div>
       </nav>

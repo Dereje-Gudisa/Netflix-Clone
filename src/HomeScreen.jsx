@@ -1,4 +1,6 @@
 import React, {useContext} from 'react';
+import { Button } from "@/components/ui/button"
+
 import ScreenBackgroundImg from './assets/screen-background-img.png';
 import { FiInfo } from "react-icons/fi";
 import { FaPlay } from "react-icons/fa";
@@ -36,7 +38,10 @@ function HomeScreen() {
                 <div className='flex'>
                     <button className='text-black bg-white flex justify-center items-center border-2 border-white m-2 p-2 w-30 rounded-sm'><FaPlay className='mx-2'/>Play</button>
                     <button className='text-white bg-gray-950 flex justify-around items-center border-2 border-white m-2 p-2 w-30 rounded-sm'><FiInfo />More Info</button>
+                    <Button variant='secondary'>Button</Button>
+
                 </div>
+
 
                 <div className='flex items-center justify-end'>
                     <div className='text-3xl h-7 p-0 mx-3  flex justify-center items-center'><IoReloadCircleOutline />

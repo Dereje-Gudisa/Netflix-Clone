@@ -4,7 +4,6 @@ import { createContext, useContext, useState, useEffect } from "react";
 export const MovieContext = createContext();
 
 export const MyProvider = ({ children }) => {
-  const value = "Hello from context!";
 
   const [movies, setMovies] = useState([]);
 
@@ -37,6 +36,5 @@ export const MyProvider = ({ children }) => {
     </MovieContext.Provider>
   );
 };
-
 
 export const useMovies = () => useContext(MovieContext);
