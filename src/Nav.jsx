@@ -5,6 +5,8 @@ import profile2 from './assets/profile2.png';
 import profile3 from './assets/profile3.png';
 import { IoSearch } from "react-icons/io5";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { Link } from 'react-router-dom';
+
 "use client"
 
 import {
@@ -56,20 +58,6 @@ function Nav() {
                     <button><IoSearch /></button>
                     <li><a href="#">Kids</a></li>
                     <li><a href="#"><IoMdNotificationsOutline /></a></li>
-                    {/* <img className='w-8 h-auto' src={profile} alt="Profile" />
-
-                    <select name="profile" id="" className='text-white bg-[#141414] p-1 border-2 rounded-sm'>
-                        
-                        <option value="profile">profile 1</option>
-                        <option value="profile1">Profile 2</option>
-                        <option value="profile2">Profile 3</option>
-                        <option value="profile3">Profile 4</option>
-
-                        <option value="profile1">Manage Profile</option>
-                        <option value="profile2">Account</option>
-                        <option value="profile3">Help Center</option>
-                        <option value="profile3">Sign out of Netflix</option>
-                    </select> */}
 
                     <DropdownMenu>
                         <DropdownMenuTrigger render={<Button variant="ghost" size="icon">
@@ -88,8 +76,8 @@ function Nav() {
                             <DropdownMenuItem><img  src={profile} alt="profile2" className='w-8 h-8 rounded-sm mr-2' />Mohammed A</DropdownMenuItem>
 
                             <DropdownMenuItem className = 'mt-2'><GrEdit />Manage Profile</DropdownMenuItem>
-
-                            <DropdownMenuItem><UserIcon />Account</DropdownMenuItem>
+                            
+                            <Link to="/account"><DropdownMenuItem><UserIcon />Account</DropdownMenuItem></Link>
 
                             <DropdownMenuItem><LuCircleHelp />Help Center</DropdownMenuItem>
 

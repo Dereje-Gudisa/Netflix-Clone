@@ -36,9 +36,10 @@ function HomeScreen() {
                 </p><br />
 
                 <div className='flex'>
-                    <button className='text-black bg-white flex justify-center items-center border-2 border-white m-2 p-2 w-30 rounded-sm'><FaPlay className='mx-2'/>Play</button>
-                    <button className='text-white bg-gray-950 flex justify-around items-center border-2 border-white m-2 p-2 w-30 rounded-sm'><FiInfo />More Info</button>
-                    <Button variant='secondary'>Button</Button>
+                    <button className='text-black bg-white flex justify-center items-center m-2 p-2 w-30 rounded-sm hover:bg-[#fff]/80'><FaPlay className='mx-2'/>Play</button>
+
+                    <button className='text-white bg-gray-700/50 flex justify-around items-center  m-2 p-2 w-30 rounded-sm hover:bg-gray-800/50 focus:outline-2 focus:outline-offset-2 focus:outline-white-500 active:bg-gray-700'><FiInfo />More Info</button>
+                    
 
                 </div>
 

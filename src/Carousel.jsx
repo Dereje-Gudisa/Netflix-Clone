@@ -45,7 +45,7 @@ const Carousel = () => {
 
     return (
         <>  
-            <div className='border-2 mt-5 w-full flex justify-end items-center pr-10 mb-2 '>
+            <div className='mt-5 w-full flex justify-end items-center pr-10 mb-2 '>
                 {Array.from({ length: moviePerPage }, (_, index) => (
                     <span 
                         key={index}
