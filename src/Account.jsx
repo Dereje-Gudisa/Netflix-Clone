@@ -33,18 +33,18 @@ const Account = () => {
         <div className='w-full h-auto text-black text-3xl font-bold border-2 border-gray-500 bg-white flex items-center justify-center'>
 
 
-      <Item className="w-full border-1 border-gray-400">
-        <ItemMedia variant="icon" className="hover:bg-gray-200">
-          <p>icon</p>
-        </ItemMedia>
-        <ItemContent className="w-full hover:bg-gray-200">
-          <ItemTitle >Title</ItemTitle>
-          <ItemDescription>Description</ItemDescription>
-        </ItemContent>
-        <ItemActions>
-          <Button variant='gohst'><SlArrowRight /></Button>
-        </ItemActions>
-      </Item>
+          <Item className="w-full border-1 border-gray-400">
+            <ItemMedia variant="icon" className="hover:bg-gray-200">
+              <p>icon</p>
+            </ItemMedia>
+            <ItemContent className="w-full hover:bg-gray-200">
+              <ItemTitle>Manage payment method</ItemTitle>
+            </ItemContent>
+            <ItemActions>
+              <Button variant='gohst'><SlArrowRight /></Button>
+            </ItemActions>
+
+          </Item>
           
           <div>
             <p>Back to Netflix</p>
