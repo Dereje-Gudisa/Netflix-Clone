@@ -5,7 +5,7 @@ import HomeScreen from './HomeScreen';
 import Carousel from './Carousel';
 import { MyProvider } from './context/MovieContext';
 import Footer from './Footer';
-import Account from './Account';
+import Account from './account/Account.jsx';
 import Latest from './Latest';
 import Movies from './Movies';
 import Games from './Games';
@@ -16,20 +16,22 @@ import BrowseByLanguage from './BrowseByLanguage';
 
 
 
-
 function App() {
 
   return (
     <>
+
       <MyProvider>
         
         <Nav />
         <Routes>
           <Route path="/" element={
+
             <>
               <HomeScreen />
-              <Carousel/>
+              <Carousel />
             </>
+
             } />
           <Route path="/account" element={<Account />} />
           <Route path="/latest" element={<Latest />} />
@@ -44,7 +46,9 @@ function App() {
         <Footer />
         
       </MyProvider>
+
     </>
+
   )
 }
 
