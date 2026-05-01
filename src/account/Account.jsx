@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button"
 import { SlArrowRight } from "react-icons/sl";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -7,7 +8,10 @@ import { BsExclamationOctagon } from "react-icons/bs";
 import { PiDevicesLight } from "react-icons/pi";
 import { MdOutlinePayment } from "react-icons/md";
 import { FaRankingStar } from "react-icons/fa6";
-
+import { IoMdHome } from "react-icons/io";
+import { MdOutlineAccountBox } from "react-icons/md";
+import { IoShieldCheckmarkOutline } from "react-icons/io5";
+import { GoArrowLeft } from "react-icons/go";
 
 import {
   Item,
@@ -41,13 +45,13 @@ const Account = () => {
 
           <div className='flex-start border-2 border-black col-2'>
 
-            <div className='w-[98%] my-10   text-lg'>
+            <div className='w-[98%] my-10   text-lg' >
               <Item className="w-full  hover:bg-gray-200 " >
                 <ItemMedia variant="icon" className="hover:bg-gray-200 h-fit">
-                  <p>icon</p>
+                  <GoArrowLeft />
                 </ItemMedia>
                 <ItemContent className="w-full h-fit">
-                  <ItemTitle>Back to Netflix </ItemTitle>
+                   <Link to="/"><ItemTitle>Back to Netflix </ItemTitle></Link>
                 </ItemContent>
               </Item>
             </div>
@@ -55,7 +59,7 @@ const Account = () => {
             <div className='w-[98%] mt-2 text-lg'>
               <Item className="w-full  hover:bg-gray-200 " >
                 <ItemMedia variant="icon" className="hover:bg-gray-200 h-fit">
-                  <p> icon </p>
+                  <IoMdHome />
                 </ItemMedia>
                 <ItemContent className="w-full h-fit">
                   <ItemTitle>OverView </ItemTitle>
@@ -66,7 +70,7 @@ const Account = () => {
             <div className='w-[98%] mt-2   text-lg'>
               <Item className="w-full  hover:bg-gray-200 " >
                 <ItemMedia variant="icon" className="hover:bg-gray-200 h-fit">
-                  <p>icon</p>
+                  <MdOutlinePayment />
                 </ItemMedia>
                 <ItemContent className="w-full h-fit">
                   <ItemTitle>MemberShip </ItemTitle>
@@ -77,7 +81,7 @@ const Account = () => {
             <div className='w-[98%] mt-2   text-lg'>
               <Item className="w-full  hover:bg-gray-200 " >
                 <ItemMedia variant="icon" className="hover:bg-gray-200 h-fit">
-                  <p>icon</p>
+                 <IoShieldCheckmarkOutline />
                 </ItemMedia>
                 <ItemContent className="w-full h-fit">
                   <ItemTitle>Security </ItemTitle>
@@ -88,7 +92,7 @@ const Account = () => {
             <div className='w-[98%] mt-2   text-lg'>
               <Item className="w-full  hover:bg-gray-200 " >
                 <ItemMedia variant="icon" className="hover:bg-gray-200 h-fit">
-                  <p>icon</p>
+                  <PiDevicesLight />
                 </ItemMedia>
                 <ItemContent className="w-full h-fit">
                   <ItemTitle>Devices </ItemTitle>
@@ -99,7 +103,7 @@ const Account = () => {
             <div className='w-[98%] mt-2   text-lg'>
               <Item className="w-full  hover:bg-gray-200 " >
                 <ItemMedia variant="icon" className="hover:bg-gray-200 h-fit">
-                  <p>icon</p>
+                  <MdOutlineAccountBox />
                 </ItemMedia>
                 <ItemContent className="w-full h-fit">
                   <ItemTitle>Profile </ItemTitle>
