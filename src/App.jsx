@@ -13,7 +13,8 @@ import MyList from './MyList';
 import Home from './Home';
 import Shows from './Shows';
 import BrowseByLanguage from './BrowseByLanguage';
-
+import Membership from './account/Membership';
+import Security from './account/Security';
 
 
 function App() {
@@ -40,6 +41,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/myList" element={<MyList />} />
           <Route path="/shows" element={<Shows />} />
+          <Route path="/membership" element={<Membership />} />
+          <Route path="/security" element={<Security />} />
           <Route path="/browseByLanguage" element={<BrowseByLanguage />} />
         </Routes>
         

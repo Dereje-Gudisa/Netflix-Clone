@@ -12,6 +12,7 @@ import { IoMdHome } from "react-icons/io";
 import { MdOutlineAccountBox } from "react-icons/md";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { GoArrowLeft } from "react-icons/go";
+import AccountMenu from './AccountMenu';
 
 import {
   Item,
@@ -40,10 +41,13 @@ const Account = () => {
 
   return (
     <>
+
       <div className='mt-30 w-full h-screen bg-gray-500 flex items-center justify-center'>
         <div className='w-[100%] h-auto text-black text-3xl font-bold border-2 border-gray-500 bg-white grid grid-cols-5 gap-4 justify-center'>
+        
+          <AccountMenu />
 
-          <div className='flex-start border-2 border-black col-2'>
+          {/* <div className='flex-start col-2'>
 
             <div className='w-[98%] my-10   text-lg' >
               <Item className="w-full  hover:bg-gray-200 " >
@@ -73,7 +77,7 @@ const Account = () => {
                   <MdOutlinePayment />
                 </ItemMedia>
                 <ItemContent className="w-full h-fit">
-                  <ItemTitle>MemberShip </ItemTitle>
+                  <Link to="/membership"><ItemTitle>MemberShip </ItemTitle></Link>
                 </ItemContent>
               </Item>
             </div>
@@ -111,9 +115,8 @@ const Account = () => {
               </Item>
             </div>
 
-          </div>
+          </div> */}
 
-          
 
           <div className='w-1/2 col-3 col-span-3 '>
             <h1 className='ml-5'>Account</h1>
@@ -140,17 +143,7 @@ const Account = () => {
             </div>
             <p className='ml-5 mt-10 text-gray-500 text-lg'>Quick LInks</p>
             <div className='m-5  border-1 border-gray-400 flex flex-col items-center rounded-lg'>
-              {/* <Item className="w-[98%] my-3 border-b-1  border-gray-400 h-14 hover:bg-gray-200 " >
-                <ItemMedia variant="icon" className="hover:bg-gray-200 h-fit">
-                  <p>icon</p>
-                </ItemMedia>
-                <ItemContent className="w-full h-fit">
-                  <ItemTitle>Change</ItemTitle>
-                </ItemContent>
-                <ItemActions>
-                  <Button variant='gohst'><SlArrowRight /></Button>
-                </ItemActions>
-              </Item> */}
+
 
               <div className='w-[98%] mt-2 pt-3  text-lg border-t-1 border-gray-300'>
                 <Item className="w-full h-14  hover:bg-gray-200 " >
