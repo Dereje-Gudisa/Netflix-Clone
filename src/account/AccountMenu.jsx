@@ -7,6 +7,8 @@ import { MdOutlineAccountBox } from "react-icons/md";
 import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { GoArrowLeft } from "react-icons/go";
 import Security from './Security';
+import Profiles from './Profiles'
+import Devices from './Devices';
 
 
 import {
@@ -76,7 +78,7 @@ const AccountMenu = () => {
                     <PiDevicesLight />
                 </ItemMedia>
                 <ItemContent className="w-full h-fit">
-                    <ItemTitle>Devices </ItemTitle>
+                    <Link to='/Devices'><ItemTitle>Devices</ItemTitle></Link>
                 </ItemContent>
                 </Item>
             </div>
@@ -87,7 +89,7 @@ const AccountMenu = () => {
                     <MdOutlineAccountBox />
                 </ItemMedia>
                 <ItemContent className="w-full h-fit">
-                    <ItemTitle>Profile </ItemTitle>
+                    <Link to="/Profiles"><ItemTitle>Profiles </ItemTitle></Link>
                 </ItemContent>
                 </Item>
             </div>

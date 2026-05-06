@@ -15,6 +15,8 @@ import Shows from './Shows';
 import BrowseByLanguage from './BrowseByLanguage';
 import Membership from './account/Membership';
 import Security from './account/Security';
+import Devices from './account/Devices';
+import Profiles from './account/Profiles';
 
 
 function App() {
@@ -43,9 +45,11 @@ function App() {
           <Route path="/shows" element={<Shows />} />
           <Route path="/membership" element={<Membership />} />
           <Route path="/security" element={<Security />} />
+          <Route path="/devices" element={<Devices />} />
+          <Route path="/profiles" element={<Profiles />} />
           <Route path="/browseByLanguage" element={<BrowseByLanguage />} />
         </Routes>
-        
+
         <Footer />
         
       </MyProvider>
