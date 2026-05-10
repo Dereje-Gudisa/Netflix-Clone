@@ -7,6 +7,26 @@ export const MyProvider = ({ children }) => {
 
   const [movies, setMovies] = useState([]);
   const [searchQuery, setSearchQuery] = useState(""); // Track the search input
+  const [myList, setMyList] = useState([]);
+
+  const handleMyList = (movie) => {
+    setMyList((prevList) => {
+      // Check if movie is already in the list
+      const isBookmarked = prevList.find((item) => item.id === movie.id);
+      
+      if (isBookmarked) {
+        // If it exists, remove it (Toggle behavior)
+        return prevList.filter((item) => item.id !== movie.id);
+      } else {
+        // If it's new, add it
+        return [...prevList, movie];
+      }
+    });
+  };
+
+  console.log(myList)
+
+
   const filteredMovies = movies.filter((movie) =>
   movie.title.toLowerCase().includes(searchQuery.toLowerCase())
 );
@@ -34,7 +54,12 @@ export const MyProvider = ({ children }) => {
   
   return (
     <MovieContext.Provider value={{
-        movies, searchQuery, setSearchQuery, filteredMovies
+        movies,
+        myList,
+        handleMyList,
+        searchQuery,
+        setSearchQuery,
+        filteredMovies
     }}>
       {children}
     </MovieContext.Provider>

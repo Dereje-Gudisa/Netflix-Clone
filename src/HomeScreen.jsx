@@ -77,8 +77,8 @@ function HomeScreen() {
             
             <div className='ml-10 pl-10 w-full'>
 
-                <h1 className=' text-2xl h-1/2 mt-30 w-1/5 h-1/2 flex justify-start items-center'>{title}</h1><br />
-                <p className='w-1/3'>
+                <h1 className=' text-2xl h-1/2 mt-30 w-1/5 h-1/2 flex justify-start items-center '>{title}</h1><br />
+                <p className='w-1/3   '>
                     {overView}
                 </p><br />
 
@@ -87,7 +87,6 @@ function HomeScreen() {
 
                     <button className='text-white bg-gray-700/50 flex justify-around items-center  m-2 p-2 w-30 rounded-sm hover:bg-gray-800/50 focus:outline-2 focus:outline-offset-2 focus:outline-white-500 active:bg-gray-700'><FiInfo />More Info</button>
                 </div>
-
 
                 <div className='flex items-center justify-end'>
 
