@@ -18,7 +18,7 @@ import {
 const Profiles = () => {
   return (
     <>
-      <div className='w-[100%] h-screen text-black text-3xl font-bold border-2 border-gray-500 bg-white grid grid-cols-5 gap-4 justify-center'>
+      <div className='w-[100%] h-screen text-black text-3xl font-bold border-2 border-gray-500 bg-white grid grid-cols-5 gap-4 justify-center mt-15'>
           <AccountMenu />
           <div className='w-1/2 col-3 col-span-3 '>
             <h1 className='ml-5'>Profiles</h1>

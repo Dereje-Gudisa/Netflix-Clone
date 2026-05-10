@@ -6,6 +6,10 @@ export const MovieContext = createContext();
 export const MyProvider = ({ children }) => {
 
   const [movies, setMovies] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(""); // Track the search input
+  const filteredMovies = movies.filter((movie) =>
+  movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+);
 
   useEffect(() => {
   
@@ -19,8 +23,8 @@ export const MyProvider = ({ children }) => {
           //movies.push(...fetchedData.results);
   
           //console.log(movies);
-          console.log(movies.length);
-          console.log(fetchedData.results[0].title);
+/*           console.log(movies.length);
+          console.log(fetchedData.results[0].title); */
   
       };
     moviesData();
@@ -30,7 +34,7 @@ export const MyProvider = ({ children }) => {
   
   return (
     <MovieContext.Provider value={{
-        movies
+        movies, searchQuery, setSearchQuery, filteredMovies
     }}>
       {children}
     </MovieContext.Provider>

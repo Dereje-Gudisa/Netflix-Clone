@@ -13,7 +13,7 @@ const Carousel = () => {
     const { movies } = useMovies();
 
     const moviePerPage = Math.ceil(movies.length / groupSize);
-    console.log(moviePerPage);
+    /* console.log(moviePerPage); */
 
 
 // update the visible movies whenever the movies or currentIndex changes
@@ -70,21 +70,6 @@ const Carousel = () => {
                             {/* <div className='text-white'>{movie.title}</div> */}
                         </div>
                     ))}
-
-                    {/* movies.map((movie   , index) => (
-                        <div 
-                            key={index}
-                            className={'border-2 border-black w-1/5 h-40 mx-auto flex justify-center items-center'}
-                            id={index + 1}>
-
-                                {movies.map(movie => (
-                                    <div key={movie.id}>
-                                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
-                                    </div>
-                                ))}
-                                
-                        </div>
-                    )) */}
                 </div>
 
                 <button className='text-white p-2 ' onClick={() => handleNext(currentIndex)}><GrNext /></button>
