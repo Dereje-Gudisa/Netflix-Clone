@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import { Button } from "@/components/ui/button"
+import { IoMdArrowDropdown } from "react-icons/io";
 
 import ScreenBackgroundImg from './assets/screen-background-img.png';
 import { FiInfo } from "react-icons/fi";
@@ -7,6 +8,7 @@ import { FaPlay } from "react-icons/fa";
 import { IoReloadCircleOutline } from "react-icons/io5";
 //import Carousel from './Carousel';
 import { MovieContext, useMovies } from './context/MovieContext';
+import Nav from './Nav';
 
 function HomeScreen() {
 
@@ -70,10 +72,21 @@ function HomeScreen() {
             
         ) : (
 
-        <div className='bg-gray-900 text-white h-200 flex bg-cover bg-center' 
+        <div className='bg-gray-900 text-white h-200 flex bg-cover bg-center relative' 
         style={{ 
             backgroundImage: firstMovie ? `url(https://image.tmdb.org/t/p/original${firstMovie.poster_path})` 
             :`url(${ScreenBackgroundImg})` }}>
+                <Nav/>
+                
+                <div className='absolute flex w-70 justify-between left-20 top-20' >
+                    <h1 className=' text-2xl h-10 p-2 font-bold'>TV Shows</h1>
+                    <div className='border-1 p-2 bg-black text-white w-30 flex justify-between items-center hover:bg-black/10 active:bg-black/10 '>
+                        <h1 className='font-bold'>Genres</h1>
+                        <IoMdArrowDropdown />
+                        
+                    </div>
+                    
+                </div>
             
             <div className='ml-10 pl-10 w-full'>
 

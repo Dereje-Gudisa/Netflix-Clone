@@ -1,10 +1,17 @@
 import React from 'react';
+import Carousel from './Carousel';
+import HomeScreen from './HomeScreen';
+
 
 const Shows = () => {
 
   return (
     <>
-      <h1 className='text-white'>Shows</h1>
+      <HomeScreen />
+      <Carousel />
+      <Carousel />
+      <Carousel />
+      <Carousel />
     </>
   )
 }
