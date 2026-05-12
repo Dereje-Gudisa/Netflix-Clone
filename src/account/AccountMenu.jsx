@@ -25,7 +25,6 @@ const AccountMenu = () => {
 
   return (
     <>
-
         <div className='flex-start col-2'>
 
             <div className='w-[98%] my-10   text-lg' >

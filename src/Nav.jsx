@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState  } from 'react';
 import { useMovies } from './context/MovieContext'; // Adjust path as needed
 import logo from './assets/netflix-logo.png';
 import profile from './assets/profile.png';
@@ -59,16 +59,20 @@ import { SearchIcon } from "lucide-react"
 function Nav() {
 const { setSearchQuery } = useMovies(); // Get the setter function
 
+const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+
 const handleInputChange = (e) => {
     setSearchQuery(e.target.value);
+
+
   };
-const handleSearchIcon = () => {
-  const searchIcon = document.getElementById('ioSearch');
-  const inlineInput = document.getElementById('inline-input');
-  searchIcon.style.display = 'none';
-  inlineInput.style.display = 'block';
-  
-};
+
+
+  const toggleSearchBar = () => {
+    setIsSearchOpen(!isSearchOpen);
+
+  };
 
   return (
     <>
@@ -87,18 +91,29 @@ const handleSearchIcon = () => {
 
                 </ul>
                 
-                <ul className='text-white flex justify-around items-center w-130'>
+                <ul className='text-white flex justify-around items-center'>
+                  <div className="flex items-center">
+                    <div className={`overflow-hidden transition-all duration-500 ease-in-out ${ isSearchOpen ? 'w-70 opacity-100 ' : 'w-0 opacity-0'}`}>
 
-                    <Field className="w-70 " id="inline-input" onChange={(e) => handleInputChange(e)}>
-                      <InputGroup>
-                        <InputGroupInput id="inline-start-input" placeholder="Titles, people, genres" />
-                        <InputGroupAddon align="inline-start">
-                          <SearchIcon className="text-muted-foreground" />
-                        </InputGroupAddon>
-                      </InputGroup>
-                    </Field>
+                      <Field className="w-65 " id="inline-input" >
+                        <InputGroup /* onChange={(e) => handleInputChange(e)} */>
+                          <InputGroupInput id="inline-start-input" placeholder="Titles, people, genres" onChange={(e) => handleInputChange(e)} />
+                          <InputGroupAddon align="inline-start">
+                            <SearchIcon className="text-muted-foreground" />
+                          </InputGroupAddon>
+                        </InputGroup>
+                      </Field>
+                    </div>
 
-                    <button className='text-2xl' /* onClick={()=>handleSearchIcon()} */><IoSearch className='ioSearch' id='ioSearch'/></button>
+                    {/* <button className={`text-2xl ml-2 pr-5 focus:outline-none ${ isSearchOpen ? 'hidden' : 'opacity-100'}` } onClick={()=>toggleSearchBar()}><IoSearch className='ioSearch' id='ioSearch'/></button> */}
+
+                    <button type="button" className="text-2xl ml-2 pr-5 focus:outline-none" onClick={toggleSearchBar}>
+                        {/* Use a clear icon if open, search icon if closed */}
+                        {isSearchOpen ? <MdClear className="text-xl" /> : <IoSearch />}
+                    </button>
+
+                  </div>
+                  <div className='flex gap-5 justify-center items-center'>
                     <li><a href="#">Kids</a></li>
                     <li className='text-2xl'><a href="#"><IoMdNotificationsOutline /></a></li>
 
@@ -130,6 +145,7 @@ const handleSearchIcon = () => {
                             </DropdownMenuGroup>
                         </DropdownMenuContent>
                     </DropdownMenu>
+                  </div>
                 </ul>
             </div>
       </nav>
